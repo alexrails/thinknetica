@@ -27,10 +27,8 @@ calend = {
 }
 
 day_num = 0
-i = 1
-calend.each do |m, d|
-  break if i >= month
-  day_num += d
-  i += 1
+calend.each.with_index do |m, index|
+  break if index + 1 >= month
+  day_num += calend[m]
 end
 puts "Number of date - #{day_num + date}"

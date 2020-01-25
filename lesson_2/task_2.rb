@@ -1,5 +1,3 @@
 array = []
-(10..100).each do |n|
-  array << n if n%5 == 0
-end
+(10..100).step(5) { |x| array << x }
 p array
